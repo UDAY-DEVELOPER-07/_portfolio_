@@ -1,10 +1,11 @@
 "use client"
-import { useEffect } from "react";
+import * as motion from "motion/react-client"
+import { useState } from "react"
 
-export default function Login(){
-    return(
-        <>
-            <h1>Hello I am Uday Pratap Singh</h1>
-        </>
-    )
+export default function Loader(){
+  return(
+    <>
+      <div>Heloo I am Uday Pratap Singh</div>
+    </>
+  )
 }
