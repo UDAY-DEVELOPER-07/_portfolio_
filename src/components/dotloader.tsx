@@ -13,7 +13,7 @@ interface DotProps {
 }
 
 const Dot = styled.div<DotProps>`
-  background-color: #D9B08C;
+  background-color: #FFF7E5;
   border-radius: 50%;
   width: 10px;
   height: 10px;

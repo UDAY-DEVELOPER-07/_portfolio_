@@ -5,28 +5,25 @@
   --foreground: #171717;
 }
 
-@font-face {
-  font-family: 'my-font';
-  src: url('/public/fonts/font2.ttf')format('ttf');
-  font-weight: 500;
-}
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-dune-rise: var(--font-dune-rise);
+  --font-michroma-rise: var(--font-michroma-rise);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2C3531;
-    --foreground: #FFCB9A;
+    --background: #B33707	;
+    --foreground: #FFF7E5	;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "my-font";
+  font-family: var(--font-dune-rise), var(--font-michroma-rise);
+  
 }
