@@ -1,3 +1,4 @@
+import { style } from "motion/react-client";
 import { title } from "process";
 import StackIcon from "tech-stack-icons";
 
@@ -18,27 +19,37 @@ const stacks = [
   { name: "Shadcnui", title: "ShadcnUI" },
   { name: "Typescript", title: "Typescript" },
   { name: "Canva", title: "Canva" },
-  { name: "NPM",  title: "NPM" },
   { name: "Gsap", title: "Gsap" },
-  { name: "slack", title: "Slack" },
-  { name: "ubuntu", title: "Ubuntu" },
 ];
-
+const styles = {
+  height: "2rem",
+  width: "2em",
+  pointerEvents: "none" as const
+};
 export default function Stacks() {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-6 mt-10 mb-10">
-      {stacks.map((stack, index) => {
-        const iconName = `${stack.name}`.toLowerCase()
-          .replace(/\s+/g, '')
-          .replace(/\./g, '');
+    <div className="flex flex-row flex-wrap justify-center gap-4 sm:gap-6 mt-8 mb-10">
+  {stacks.map((stack, index) => {
+    const iconName = `${stack.name}`.toLowerCase()
+      .replace(/\s+/g, '')
+      .replace(/\./g, '');
 
-        return (
-          <div key={index} className="flex justify-center bg-amber-500 h-32 w-32 rounded-[50%] border-[1px] border-amber-300 backdrop-blur-2xl flex-col items-center mx-2 hover: cursor-zoom-in hover:scale-120 transition-transform duration-300 ease-in-out">
-            <StackIcon name={iconName} style={{height: "2.8125rem",width: "2.815rem"}} />
-            <span className="font-michroma-rise text-shadow-2xs text-[12px] font-bold mt-2">{stack.title}</span>
-          </div>
-        );
-      })}
-    </div>
+    return (
+      <div
+        key={index}
+        className="flex flex-col items-center justify-center bg-amber-400 text-amber-950
+                   h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 rounded-full shadow-2xl
+                   border border-amber-300 backdrop-blur-2xl mx-2 
+                   cursor-zoom-in hover:scale-110 transition-transform
+                   duration-300 ease-in-out"
+      >
+        <StackIcon name={iconName} style={styles} />
+        <span className="font-michroma-rise text-shadow-2xs text-[10px] sm:text-xs font-bold mt-2 text-center">
+          {stack.title}
+        </span>
+      </div>
+    );
+  })}
+</div>
   );
 }

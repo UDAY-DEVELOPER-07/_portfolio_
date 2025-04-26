@@ -7,7 +7,7 @@ export default function Loading(){
   const router =  useRouter()
 
   useEffect(()=>{
-    router.push("/Login")
+    router.push("/Home")
   },[router])
 
   return(
