@@ -1,6 +1,6 @@
 "use client"
-import * as motion from "motion/react-client"
-import LoadingDots from '@/components/dotloader';
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Loader() {
   const box = {
@@ -12,20 +12,22 @@ export default function Loader() {
     borderRadius: 5,
     borderColor: "red"
   }
+  const router = useRouter();
+  useEffect(() => {
+    addEventListener("click", () => {
+      router.push("/Skills")
+    })
+  }, [router])
   return (
     <>
-      <div className='flex flex-col justify-center align-middle items-center text h-screen w-full'>
-        <motion.div
-          style={box}
-          animate={{ rotate: 720 }}
-          transition={{ duration: 2 }}
-        />
-        <div className="flex mt-10  flex-row">
-            <div className=' text text-4xl font-extrabold'>Loading</div>
-          <div className="mb-2">
-            <LoadingDots />
-          </div>
-        </div>
+      <div className="flex flex-col justify-center items-center h-screen w-full">
+        <h2 className="text-2xl"> Lost in dune... but every journey begins here</h2>
+        <button
+          className="bg-amber-500 text-amber-950 flex justify-center items-center rounded-full p-2 mt-4"
+          onClick={() => router.push("/Skills")}
+        >
+          Skills
+        </button>
       </div>
     </>
   )

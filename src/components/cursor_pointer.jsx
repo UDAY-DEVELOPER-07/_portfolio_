@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 
-export default function Cursor_Positon(){
+export default function Cursor_Position(){
     const [mousePosition , setmousePosition] = useState({
         x: null,
         y: null
@@ -25,7 +25,7 @@ export default function Cursor_Positon(){
         <>
             <div  
             style={{top: mousePosition.y - 4 +'px' ,left: mousePosition.x - 4 + 'px'}}
-            className="h-4 w-4 absolute bg-transparent border-[.5px] shadow-2xl shadow-amber-300 border-amber-100 rounded-4xl">
+            className="h-5 w-5 absolute bg-transparent z-2 border-[1px] border-black rounded-4xl">
             </div>
         </>
     )

@@ -1,5 +1,6 @@
 import localFont from 'next/font/local'
 import "./globals.css"
+import Cursor_Position from '@/components/cursor_pointer';
 
 const myFont = localFont({
   src: '../../public/fonts/Dune_Rise.ttf',
@@ -23,7 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${myFont.variable} ${myFont2.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Cursor_Position />
+        
+      </body>
     </html>
   )
 }
