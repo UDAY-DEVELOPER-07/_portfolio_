@@ -1,3 +1,5 @@
 text-stack-icons
 animejs
 motion
+npx shadcn@latest add button
+animata

@@ -1,7 +1,8 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import ArrowButton from "@/components/ui/buttun1";
 import { useRouter } from "next/navigation";
 import { useEffect, useCallback } from "react";
+
 
 export default function Home() {
   const router = useRouter();
@@ -22,12 +23,17 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center h-screen w-full"
         style={box}>
         <h2 className="text-3xl text-amber-50 font-extrabold shadow-2xl text-shadow-black text-shadow-2xl "> Lost in dune... <br/>but every journey begins here</h2>
-        <Button 
-          variant="ghost"
-          className="bg-amber-200 text-amber-950 flex justify-center shadow-2xl shadow-black text-shadow-2xl items-center rounded-full p-2 mt-4"
-          onClick={handleNavigation}>
-         Skills
-        </Button>
+        <ArrowButton 
+          text="Skills"
+          textColor="#FFF7E5"
+          buttonOverlayColor="#black"
+          borderColor="#c284f9"
+          iconColor="#FFF7E5"
+          className="mt-5"
+          onClick={handleNavigation}
+          style={{ backgroundColor: "transparent", borderColor: "transparent" , }
+          }
+        />
       </div>
     </>
   )
