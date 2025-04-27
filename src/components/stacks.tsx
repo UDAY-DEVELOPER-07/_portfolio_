@@ -1,6 +1,6 @@
-import { style } from "motion/react-client";
-import { title } from "process";
+
 import StackIcon from "tech-stack-icons";
+import  { DuneGradient } from "./ui/animatedbg";
 
 const stacks = [
   { name: "HTML5",title: "HTML" },
@@ -35,11 +35,15 @@ export default function Stacks() {
       .replace(/\./g, '');
 
     return (
+      <DuneGradient className=" flex flex-col items-center justify-center h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 rounded-full shadow-2xl
+                   border border-amber-300 backdrop-blur-2xl mx-2 
+                   cursor-zoom-in hover:scale-110 transition-transform
+                   duration-300 ease-in-out" >
       <div
         key={index}
-        className="flex flex-col items-center justify-center bg-amber-400 text-amber-950
+        className="flex flex-col items-center justify-center bg-transparent text-amber-950
                    h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 rounded-full shadow-2xl
-                   border border-amber-300 backdrop-blur-2xl mx-2 
+                  backdrop-blur-2xl mx-2 
                    cursor-zoom-in hover:scale-110 transition-transform
                    duration-300 ease-in-out"
       >
@@ -48,6 +52,7 @@ export default function Stacks() {
           {stack.title}
         </span>
       </div>
+      </DuneGradient>
     );
   })}
 </div>

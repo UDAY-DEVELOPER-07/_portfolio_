@@ -3,3 +3,5 @@ animejs
 motion
 npx shadcn@latest add button
 animata
+npm install @tsparticles/react tsparticles
+npm install tsparticles
