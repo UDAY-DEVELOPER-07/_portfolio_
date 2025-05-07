@@ -1,7 +1,7 @@
 "use client"
 import ArrowButton from "@/components/ui/buttun1";
 import { useRouter } from "next/navigation";
-import { useEffect, useCallback } from "react";
+import { useCallback } from "react";
 
 
 export default function Home() {

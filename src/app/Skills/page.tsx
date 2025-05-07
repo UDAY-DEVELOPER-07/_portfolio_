@@ -19,7 +19,7 @@ export default function Skills() {
             <div className="flex  flex-col bg-url opacity-90 justify-center items-center min-h-screen w-full py-10 md:py-20">
                 <div className="z-10 flex flex-col justify-center backdrop-blur-2xl rounded-2xl shadow-2xl items-center w-[95%] sm:w-[85%] md:w-[75%] lg:w-[65%]h-autobackdrop-blur-3xl border border-[#FFF7E5]rounded-2xl p-6 md:p-8 lg:p-10">
 
-                    <h1 className="text-[#FFF7E5] text-shadow-lg/30 mt-6 mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center font-bold">
+                    <h1 className=" mt-6 mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center font-bold">
                         <CycleText/>
                     </h1>
 
