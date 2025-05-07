@@ -9,6 +9,10 @@ export default function Home() {
   const handleNavigation = useCallback(() => {
     router.push("/Skills");
   }, [router]);
+  const handleNavigation2 = useCallback(() => {
+    router.push("/Contact");
+  }, [router]);
+
 
   const box = {
     backgroundImage: "url('/images/img3.jpg')",
@@ -31,6 +35,17 @@ export default function Home() {
           iconColor="#FFF7E5"
           className="mt-5"
           onClick={handleNavigation}
+          style={{ backgroundColor: "transparent", borderColor: "transparent" , }
+          }
+        />
+        <ArrowButton 
+          text="Contacts"
+          textColor="#FFF7E5"
+          buttonOverlayColor="#black"
+          borderColor="#c284f9"
+          iconColor="#FFF7E5"
+          className="mt-5"
+          onClick={handleNavigation2}
           style={{ backgroundColor: "transparent", borderColor: "transparent" , }
           }
         />
