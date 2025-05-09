@@ -17,7 +17,7 @@ export default function Contact() {
             }
           `}</style>
             <div className="flex bg-url items-center justify-center h-screen">
-                <div className="absolute flex flex-col justify-center items-center backdrop-blur-xl rounded-2xl shadow-2xl w-[95%] sm:w-[85%] md:w-[75%] lg:w-[65%] h-auto backdrop-blur-3xl border border-[#FFF7E5] rounded-2xl p-6 md:p-8 lg:p-10">
+                <div className="absolute flex flex-col justify-center items-center rounded-2xl shadow-2xl w-[95%] sm:w-[85%] md:w-[75%] lg:w-[65%] h-auto backdrop-blur-3xl border border-[#FFF7E5] p-6 md:p-8 lg:p-10">
                 <h1 className="text-4xl font-extrabold text-yellow-50 mb-4">Contact Us</h1>
                 <p className="text-lg mb-8">We would love to hear from you!</p>
                 <form className="w-full max-w-md">
@@ -26,7 +26,7 @@ export default function Contact() {
                             Name
                         </label>
                         <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow font-michroma-rise appearance-none border rounded h-11 box-border w-full py-2 px-3 text-white leading-3 focus:outline-none focus:shadow-outline"
                             id="name"
                             type="text"
                             placeholder="Your Name"
@@ -37,7 +37,7 @@ export default function Contact() {
                             email
                         </label>
                         <input
-                            className="shadow z-20 appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow z-20 font-michroma-rise appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                             id="email"
                             type="email"
                             placeholder="Your Email"
@@ -48,7 +48,7 @@ export default function Contact() {
                             Message
                         </label>
                         <textarea
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow font-michroma-rise appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                             id="message"
                             rows={4}
                             placeholder="Your Message"
